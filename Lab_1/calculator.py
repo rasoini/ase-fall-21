@@ -10,12 +10,15 @@ def sum(m, n):
     return m
 
 def divide(m, n):
+    if (n == 0):
+        raise ZeroDivisionError
+
     k = 0
     isNeg = (m > 0 and n < 0) or (m < 0 and n > 0)
     n = abs(n)
     m = abs(m)
 
-    while m > n:
+    while m >= n:
         m -= n
         k += 1
 
